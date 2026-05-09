@@ -1,0 +1,26 @@
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.actions a {
+  display: block;
+  padding: 2rem;
+  background: white;
+  border: 1px solid #e0d5cc;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.actions a:hover {
+  border-color: #b85a14;
+  transform: translateY(-2px);
+}
+
+.actions a h2{
+    color:#b85a14;
+    margin-bottom: 0.5rem;
+}
