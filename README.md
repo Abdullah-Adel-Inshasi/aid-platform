@@ -1,59 +1,94 @@
-# AidPlatform
+# Aid Platform
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.9.
+A full-stack humanitarian aid fundraising platform where donors can fund specific items inside aid packages, and recipients can rate which items their family needs most.
 
-## Development server
+Built as a personal full-stack learning project using Angular 19, Node.js, Express, PostgreSQL, and Prisma.
 
-To start a local development server, run:
+---
+
+## What It Does
+
+**For donors**
+- Browse aid packages (food, medical, shelter, water & hygiene, and more)
+- See each package broken down into individual items
+- View a "need rating" per item — aggregated from recipient feedback
+- Add specific items to a cart and donate toward them directly
+
+**For recipients**
+- Rate how urgently their family needs each item in a package
+- Ratings are anonymous and combined across all recipients
+- Helps donors understand where money is needed most
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | Angular 19 (standalone components, signals, SSR) |
+| Backend | Node.js + Express |
+| Database | PostgreSQL + Prisma ORM |
+| Hosting | TBD |
+
+---
+
+## Project Structure
+
+```
+aid-platform/         ← Angular frontend
+├── src/
+│   ├── app/
+│   │   ├── pages/
+│   │   │   ├── home/         ← landing page
+│   │   │   ├── donor/        ← browse & fund items
+│   │   │   └── recipient/    ← rate item urgency
+│   │   ├── app.component.*   ← root shell + nav
+│   │   ├── app.routes.ts     ← client-side routing
+│   │   └── app.config.ts     ← app configuration
+│   ├── styles.css            ← global styles
+│   └── index.html            ← HTML shell
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- Angular CLI 19+
+- PostgreSQL (coming soon)
+
+### Run the frontend
 
 ```bash
+git clone https://github.com/Abdullah-Adel-Inshasi/aid-platform
+cd aid-platform
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open [http://localhost:4200](http://localhost:4200)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Roadmap
 
-```bash
-ng generate component component-name
-```
+- [x] Project setup and routing
+- [x] Home page with donor / recipient split
+- [ ] Donor page — package and item browsing
+- [ ] Recipient page — item urgency ratings
+- [ ] Backend API with Express
+- [ ] PostgreSQL database with Prisma
+- [ ] Donation cart and checkout
+- [ ] Anonymous recipient rating tokens
+- [ ] Live funding progress per item
+- [ ] Deployment
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## About
 
-## Building
+This project is built for learning full-stack development end to end — from Angular components and routing, to REST APIs, relational databases, and deployment.
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The cause it models is real. Aid packages described in this project reflect actual humanitarian aid categories used in Gaza and similar crisis zones.
